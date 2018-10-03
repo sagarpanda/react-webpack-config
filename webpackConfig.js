@@ -2,8 +2,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const appRoot = process.mainModule.paths[0].split('node_modules')[0].slice(0, -1);
 //const ROOT_DIR = path.resolve(__dirname, '../../');
-const ROOT_DIR = path.resolve(__dirname);
+//const ROOT_DIR = path.resolve(__dirname);
+const ROOT_DIR = appRoot;
 const PUB_DIR = path.resolve(ROOT_DIR, 'public');
 
 function htmlPublish() {

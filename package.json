@@ -1,18 +1,20 @@
 {
   "name": "react-webpack-config",
-  "version": "0.0.1",
+  "version": "1.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "babel webpackConfig.js --watch --out-file index.js",
+    "pkg": "npm publish --registry http://localhost:4873",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "webpack": "^4.20.2"
+  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^8.0.4",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
@@ -21,9 +23,13 @@
     "eslint-plugin-react": "^7.11.1"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
     "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.0",
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.1"
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.4"
   }
 }

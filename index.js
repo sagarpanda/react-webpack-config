@@ -7,8 +7,10 @@ Object.defineProperty(exports, "__esModule", {
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var appRoot = process.mainModule.paths[0].split('node_modules')[0].slice(0, -1);
 //const ROOT_DIR = path.resolve(__dirname, '../../');
-var ROOT_DIR = path.resolve(__dirname);
+//const ROOT_DIR = path.resolve(__dirname);
+var ROOT_DIR = appRoot;
 var PUB_DIR = path.resolve(ROOT_DIR, 'public');
 
 function htmlPublish() {
