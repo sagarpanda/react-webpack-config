@@ -31,19 +31,16 @@ var config = {
       test: /\.(js|jsx)?/,
       exclude: /node_modules/,
       use: {
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          babelrc: false,
+          presets: ['env', 'react'],
+          plugins: ['transform-object-assign', 'transform-object-rest-spread']
+        }
       }
     }, {
       test: /\.css$/,
-      use: [{
-        loader: "style-loader"
-      }, {
-        loader: "css-loader",
-        options: {
-          modules: true,
-          sourceMap: true
-        }
-      }]
+      use: [{ loader: "style-loader" }, { loader: "css-loader", options: { modules: true, sourceMap: true } }]
     }]
   },
   resolve: {
