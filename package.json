@@ -1,16 +1,20 @@
 {
   "name": "react-webpack-config",
-  "version": "1.1.4",
+  "version": "1.1.7",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel webpackConfig.js --watch --out-file index.js",
+    "webpack:start": "babel webpackConfig.js --watch --out-file index.js",
+    "cli:start": "babel react-webpack-config-cli.js --watch --out-file cli.js",
     "pkg": "npm publish --registry http://localhost:4873",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bin": {
+    "react-webpack-config": "./cli.js"
+  },
   "peerDependencies": {
     "webpack": "^4.20.2"
   },
